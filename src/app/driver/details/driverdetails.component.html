@@ -1,0 +1,15 @@
+  <br /><br />
+  <div class="row" *ngFor="let driver of drivers | async">
+    <div class="col-md-2">
+      <img src="assets/images/{{driver.gender | lowercase}}.png" class="details-image" width="150px" height="150px" />
+    </div>
+    <div class="col-md-10">
+      <h4>    
+          {{ driver.firstName | capitalize }} {{ driver.lastName | capitalize }}&nbsp;          
+      </h4>
+      <br />
+      {{ driver.address }}
+      <br />
+      {{ driver.city }}, {{ driver.state.name }}
+    </div>
+  </div>

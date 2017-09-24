@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row grid-container">
+        <div class="col-md-10">
+            <div class="table">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th cm-sort-by="firstName" >From</th>
+                            <th cm-sort-by="lastName" >To</th>
+                            <th cm-sort-by="address" >Price</th>
+                            <th cm-sort-by="state.name" >State</th>
+                            <!-- Or you can do this directly rather than using sort-by directive -->
+                            
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let driver of drivers | async">
+
+                            <td>{{ driver.From }}</td>
+                            <td>{{ driver.To }}</td>
+                            <td>Rs {{ driver.Price }}</td>
+                            <td>Active</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
